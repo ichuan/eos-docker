@@ -9,12 +9,13 @@ if test $# -eq 0; then
     --http-server-address=0.0.0.0:8889 \
     --unlock-timeout 315360000 &
   # nodeos
+  receiver=${watch_account:-eosio.token}
   exec nodeos -e -p eosio \
     --plugin eosio::chain_plugin \
     --plugin eosio::chain_api_plugin \
     --plugin eosio::history_plugin \
     --plugin eosio::history_api_plugin \
-    --filter-on eosio.token:transfer: \
+    --filter-on ${receiver}:transfer: \
     --data-dir /opt/data \
     --http-server-address=0.0.0.0:8888 \
     --http-validate-host=false
