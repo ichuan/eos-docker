@@ -14,6 +14,7 @@ if test $# -eq 0; then
     --plugin eosio::chain_api_plugin \
     --plugin eosio::history_plugin \
     --plugin eosio::history_api_plugin \
+    --filter-on eosio.token:transfer: \
     --data-dir /opt/data \
     --http-server-address=0.0.0.0:8888 \
     --http-validate-host=false
