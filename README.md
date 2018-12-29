@@ -13,7 +13,8 @@ docker build -t eos:1.5.2 .
 
 ```
 mkdir data wallet
-docker run --rm -itd --name ieos -p 0.0.0.0:8888:8888 -p 0.0.0.0:8889:8889 -v `pwd`/data:/opt/data -v `pwd`/wallet:/opt/wallet eos
+# watch account `binancecleos` for query actions
+docker run --rm -itd --name ieos -e "watch_account=binancecleos" -p 0.0.0.0:8888:8888 -p 0.0.0.0:8889:8889 -v `pwd`/data:/opt/data -v `pwd`/wallet:/opt/wallet eos
 ```
 
 ## Persist data
@@ -31,5 +32,5 @@ docker volume create -d local-persist -o mountpoint=/data/eos-wallet --name=eos-
 Using automated build image from <https://hub.docker.com/r/mixhq/eos/>:
 
 ```
-docker run --rm -itd --name ieos -p 0.0.0.0:8888:8888 -p 0.0.0.0:8889:8889 -v `pwd`/data:/opt/data -v `pwd`/wallet:/opt/wallet mixhq/eos
+docker run --rm -itd --name ieos -e "watch_account=binancecleos" -p 0.0.0.0:8888:8888 -p 0.0.0.0:8889:8889 -v eos-data:/opt/data -v eos-wallet:/opt/wallet mixhq/eos
 ```
