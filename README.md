@@ -34,3 +34,7 @@ Using automated build image from <https://hub.docker.com/r/mixhq/eos/>:
 ```
 docker run --rm -itd --name ieos -e "watch_account=binancecleos" -p 0.0.0.0:8888:8888 -p 0.0.0.0:8889:8889 -v eos-data:/opt/data -v eos-wallet:/opt/wallet mixhq/eos
 ```
+
+## Reference
+- `mainnet-genesis.json` is from <https://github.com/EOS-Mainnet/eos/blob/mainnet-1.5.1/mainnet-genesis.json>
+- `p2p-peer-address` is from <https://eosnodes.privex.io/>

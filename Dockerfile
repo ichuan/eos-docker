@@ -9,7 +9,7 @@ RUN wget -O eos.deb https://github.com/EOSIO/eos/releases/download/v1.5.2/eosio_
 RUN dpkg -i ./eos.deb; exit 0
 RUN rm -f ./eos.deb && rm -rf /var/lib/apt/lists/*
 
-COPY ./entrypoint.sh /opt
+COPY ./entrypoint.sh ./mainnet-genesis.json /opt/
 RUN chmod +x /opt/entrypoint.sh
 
 ENTRYPOINT ["/opt/entrypoint.sh"]
