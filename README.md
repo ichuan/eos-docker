@@ -35,6 +35,25 @@ Using automated build image from <https://hub.docker.com/r/mixhq/eos/>:
 docker run --rm -itd --name ieos -e "watch_account=binancecleos" -p 0.0.0.0:8888:8888 -p 0.0.0.0:8889:8889 -v eos-data:/opt/data -v eos-wallet:/opt/wallet mixhq/eos
 ```
 
+
+## Using latest blockchain snapshot to speedup sync
+
+Using snapshots from <https://eosnode.tools/snapshots>
+
+- First, delete `blocks` and `state` dir
+
+    ```
+    rm -rf /data/eos-data/*
+    ```
+- Start with latest snapshot
+
+    ```
+    docker run --rm -itd --name ieos -e "watch_account=binancecleos" -p 0.0.0.0:8888:8888 -p 0.0.0.0:8889:8889 -v eos-data:/opt/data -v eos-wallet:/opt/wallet -v $PWD/start_from_latest_snapshot.sh:/start_from_latest_snapshot.sh mixhq/eos /start_from_latest_snapshot.sh
+    ```
+
+- Later, you can start with normal `docker run` commands
+
+
 ## Reference
 - `mainnet-genesis.json` is from <https://github.com/EOS-Mainnet/eos/blob/mainnet-1.5.1/mainnet-genesis.json>
 - `p2p-peer-address` is from <https://eosnodes.privex.io/>
