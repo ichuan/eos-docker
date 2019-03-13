@@ -14,17 +14,7 @@ docker build -t eos:1.5.2 .
 ```
 mkdir data wallet
 # watch account `binancecleos` for query actions
-docker run --rm -itd --name ieos -e "watch_account=binancecleos" -p 0.0.0.0:8888:8888 -p 0.0.0.0:8889:8889 -v `pwd`/data:/opt/data -v `pwd`/wallet:/opt/wallet eos
-```
-
-## Persist data
-
-By using [CWSpear/local-persist](https://github.com/CWSpear/local-persist):
-
-```
-curl -fsSL https://raw.githubusercontent.com/CWSpear/local-persist/master/scripts/install.sh | sudo bash
-docker volume create -d local-persist -o mountpoint=/data/eos-data --name=eos-data
-docker volume create -d local-persist -o mountpoint=/data/eos-wallet --name=eos-wallet
+docker run --rm -itd --name ieos -e "watch_account=binancecleos" -p 8888:8888 -p 8889:8889 -v `pwd`/data:/opt/data -v `pwd`/wallet:/opt/wallet eos
 ```
 
 ## Using pre-built docker image
@@ -32,7 +22,7 @@ docker volume create -d local-persist -o mountpoint=/data/eos-wallet --name=eos-
 Using automated build image from <https://hub.docker.com/r/mixhq/eos/>:
 
 ```
-docker run --rm -itd --name ieos -e "watch_account=binancecleos" -p 0.0.0.0:8888:8888 -p 0.0.0.0:8889:8889 -v eos-data:/opt/data -v eos-wallet:/opt/wallet mixhq/eos
+docker run --rm -itd --name ieos -e "watch_account=binancecleos" -p 8888:8888 -p 8889:8889 -v `pwd`/data:/opt/data -v `pwd`/wallet:/opt/wallet mixhq/eos
 ```
 
 
@@ -48,7 +38,7 @@ Using snapshots from <https://eosnode.tools/snapshots>
 - Start with latest snapshot
 
     ```
-    docker run --rm -itd --name ieos -e "watch_account=binancecleos" -p 0.0.0.0:8888:8888 -p 0.0.0.0:8889:8889 -v eos-data:/opt/data -v eos-wallet:/opt/wallet -v $PWD/start_from_latest_snapshot.sh:/start_from_latest_snapshot.sh mixhq/eos /start_from_latest_snapshot.sh
+    docker run --rm -itd --name ieos -e "watch_account=binancecleos" -p 8888:8888 -p 8889:8889 -v `pwd`/data:/opt/data -v `pwd`/wallet:/opt/wallet -v $PWD/start_from_latest_snapshot.sh:/start_from_latest_snapshot.sh mixhq/eos /start_from_latest_snapshot.sh
     ```
 
 - Later, you can start with normal `docker run` commands
