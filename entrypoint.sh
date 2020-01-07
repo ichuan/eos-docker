@@ -26,7 +26,6 @@ if test $# -eq 0; then
     --access-control-allow-origin=* \
     --contracts-console \
     --genesis-json /opt/mainnet-genesis.json \
-    --p2p-peer-address 185.253.188.1:19876 \
     --p2p-peer-address api-full1.eoseoul.io:9876 \
     --p2p-peer-address api-full2.eoseoul.io:9876 \
     --p2p-peer-address boot.eostitan.com:9876 \
@@ -38,13 +37,10 @@ if test $# -eq 0; then
     --p2p-peer-address eu1.eosdac.io:49876 \
     --p2p-peer-address fullnode.eoslaomao.com:443 \
     --p2p-peer-address mainnet.eoscalgary.io:5222 \
-    --p2p-peer-address mars.fnp2p.eosbixin.com:443 \
     --p2p-peer-address node.eosflare.io:1883 \
     --p2p-peer-address node1.eoscannon.io:59876 \
-    --p2p-peer-address node1.eosnewyork.io:6987 \
-    --p2p-peer-address node2.eosnewyork.io:6987 \
-    --p2p-peer-address p.jeda.one:3322 \
     --p2p-peer-address p2p.eosdetroit.io:3018 \
+    --p2p-peer-address p2p.genereos.io:9876 \
     --p2p-peer-address p2p.meet.one:9876 \
     --p2p-peer-address peer.eosn.io:9876 \
     --p2p-peer-address peer.main.alohaeos.com:9876 \
@@ -53,7 +49,6 @@ if test $# -eq 0; then
     --p2p-peer-address peering.mainnet.eoscanada.com:9876 \
     --p2p-peer-address peering1.mainnet.eosasia.one:80 \
     --p2p-peer-address peering2.mainnet.eosasia.one:80 \
-    --p2p-peer-address publicnode.cypherglass.com:9876 \
     --p2p-peer-address seed1.greymass.com:9876 \
     --p2p-peer-address seed2.greymass.com:9876
 else

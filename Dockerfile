@@ -5,7 +5,7 @@ VOLUME /opt/data /opt/wallet
 EXPOSE 8888 8889
 
 RUN apt-get update && apt-get install -y wget
-RUN wget -O eos.deb https://github.com/EOSIO/eos/releases/download/v1.8.4/eosio_1.8.4-1-ubuntu-18.04_amd64.deb
+RUN wget -O eos.deb https://github.com/EOSIO/eos/releases/download/v1.8.8/eosio_1.8.8-1-ubuntu-18.04_amd64.deb
 RUN dpkg -i ./eos.deb; exit 0
 RUN apt install -f -y
 RUN rm -f ./eos.deb && rm -rf /var/lib/apt/lists/*
