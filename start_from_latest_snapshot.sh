@@ -32,28 +32,26 @@ exec nodeos -e -p eosio \
   --access-control-allow-origin=* \
   --contracts-console \
   --snapshot snapshots/snapshot-*.bin \
-  --p2p-peer-address api-full1.eoseoul.io:9876 \
-  --p2p-peer-address api-full2.eoseoul.io:9876 \
-  --p2p-peer-address boot.eostitan.com:9876 \
-  --p2p-peer-address bp.cryptolions.io:9876 \
-  --p2p-peer-address bp.eosbeijing.one:8080 \
-  --p2p-peer-address bp.libertyblock.io:9800 \
-  --p2p-peer-address br.eosrio.io:9876 \
-  --p2p-peer-address eos-seed-de.privex.io:9876 \
-  --p2p-peer-address eu1.eosdac.io:49876 \
-  --p2p-peer-address fullnode.eoslaomao.com:443 \
-  --p2p-peer-address mainnet.eoscalgary.io:5222 \
-  --p2p-peer-address node.eosflare.io:1883 \
-  --p2p-peer-address node1.eoscannon.io:59876 \
-  --p2p-peer-address p2p.eosdetroit.io:3018 \
-  --p2p-peer-address p2p.genereos.io:9876 \
-  --p2p-peer-address p2p.meet.one:9876 \
-  --p2p-peer-address peer.eosn.io:9876 \
-  --p2p-peer-address peer.main.alohaeos.com:9876 \
-  --p2p-peer-address peer1.mainnet.helloeos.com.cn:80 \
-  --p2p-peer-address peer2.mainnet.helloeos.com.cn:80 \
-  --p2p-peer-address peering.mainnet.eoscanada.com:9876 \
-  --p2p-peer-address peering1.mainnet.eosasia.one:80 \
-  --p2p-peer-address peering2.mainnet.eosasia.one:80 \
-  --p2p-peer-address seed1.greymass.com:9876 \
-  --p2p-peer-address seed2.greymass.com:9876
+  --p2p-peer-address = 18.234.6.119:80 \
+  --p2p-peer-address = api-full1.eoseoul.io:9876 \
+  --p2p-peer-address = api-full2.eoseoul.io:9876 \
+  --p2p-peer-address = boot.eostitan.com:9876 \
+  --p2p-peer-address = bp.cryptolions.io:9876 \
+  --p2p-peer-address = bp.eosbeijing.one:8080 \
+  --p2p-peer-address = br.eosrio.io:9876 \
+  --p2p-peer-address = eos-seed-de.privex.io:9876 \
+  --p2p-peer-address = eu1.eosdac.io:49876 \
+  --p2p-peer-address = fullnode.eoslaomao.com:443 \
+  --p2p-peer-address = mainnet.eoscalgary.io:5222 \
+  --p2p-peer-address = node.eosflare.io:1883 \
+  --p2p-peer-address = node1.eoscannon.io:59876 \
+  --p2p-peer-address = p2p.eosdetroit.io:3018 \
+  --p2p-peer-address = p2p.genereos.io:9876 \
+  --p2p-peer-address = p2p.meet.one:9876 \
+  --p2p-peer-address = peer.eosn.io:9876 \
+  --p2p-peer-address = peer.main.alohaeos.com:9876 \
+  --p2p-peer-address = peer1.mainnet.helloeos.com.cn:80 \
+  --p2p-peer-address = peer2.mainnet.helloeos.com.cn:80 \
+  --p2p-peer-address = publicnode.cypherglass.com:9876 \
+  --p2p-peer-address = seed1.greymass.com:9876 \
+  --p2p-peer-address = seed2.greymass.com:9876

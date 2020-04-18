@@ -1,12 +1,12 @@
 # eos-docker
-Docker builds for eos, since the [official one](https://hub.docker.com/r/eosio/eos) is sunsetting.
+Docker builds for eos.
 
 We expose nodeos at port 8888, and keosd at 8889.
 
 ## Build
 
 ```
-docker build -t eos:1.5.2 .
+docker build -t eos .
 ```
 
 ## Run
@@ -28,8 +28,11 @@ docker run --rm -itd --name ieos -e "watch_account=binancecleos" -p 8888:8888 -p
 
 ## Using latest blockchain snapshot to speedup sync
 
-Using snapshots from <https://eosnode.tools/snapshots>
+Using snapshots from:
+- <https://snapshots.eossweden.org/>
+- <https://snapshots.eosnation.io/>
 
+Steps:
 - First, delete `blocks` and `state` dir
 
     ```
